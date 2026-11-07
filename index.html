@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Diwali, Ammu ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--gold:#ffd778;--cream:#fff0d2;--wine:#310b18;--rose:#ffb2b9}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:'Noto Serif Kannada',serif;background:radial-gradient(ellipse at top,#682c26 0%,#260c18 52%,#10060e 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#ffd778 1px,transparent 1px);background-size:42px 42px;z-index:0}
+header{position:relative;z-index:2;text-align:center;padding:20px 12px 5px}
+.brand{font-family:'Playfair Display',serif;letter-spacing:2px;color:var(--gold);font-size:13px}
+nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px}
+nav button,.action{border:1px solid #d9a94e;background:#5a2630;color:#ffe8b0;padding:10px 15px;border-radius:30px;cursor:pointer;font:inherit;font-size:13px;transition:.25s}
+nav button:hover,.action:hover{background:#9c543d;transform:translateY(-2px);box-shadow:0 0 18px #ffc85b55}
+nav button.active{background:linear-gradient(120deg,#f5c86b,#a85b38);color:#32101a}
+main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:15px}
+.page{display:none;min-height:68vh;text-align:center;padding:30px 18px 45px;animation:fade .65s ease}
+.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+h1,h2{font-family:'Playfair Display','Noto Serif Kannada',serif;color:var(--gold);text-shadow:0 0 18px #ffbd5366}
+h1{font-size:clamp(34px,7vw,64px);margin:18px 0}
+h2{font-size:clamp(25px,5vw,38px)}
+p{line-height:2}
+.hero-sub{font-size:18px;color:#ffe9c4}
+.diyas{font-size:clamp(42px,8vw,70px);display:flex;justify-content:space-around;max-width:650px;margin:25px auto}
+.diya{filter:drop-shadow(0 0 13px orange);animation:flicker 1.5s infinite alternate}
+.diya:nth-child(2){animation-delay:.4s}
+@keyframes flicker{to{transform:scale(1.13);filter:drop-shadow(0 0 25px #ff9d21)}}
+.card{max-width:720px;margin:22px auto;padding:25px;border:1px solid #d6a44d88;border-radius:22px;background:linear-gradient(135deg,#fff0d20d,#f8c36b12);box-shadow:0 12px 45px #0004}
+.letter{background:#fff0d9;color:#58331f;text-align:left;padding:clamp(20px,5vw,42px);border-radius:8px;box-shadow:0 10px 35px #0006;line-height:2.15}
+.letter h2{text-align:center;color:#9a482c;text-shadow:none}
+.letter p{margin:13px 0}
+.signature{text-align:center;font-weight:bold;color:#9a482c}
+
+.single-memory{
+  width:min(100%,430px);
+  margin:28px auto;
+  padding:14px 14px 24px;
+  background:linear-gradient(145deg,#fff4dc,#f2d39c);
+  border:2px solid #e9bd69;
+  border-radius:12px;
+  box-shadow:0 0 18px #ffd77866,0 16px 38px #0007;
+  transform:rotate(-1deg);
+  animation:memoryGlow 3s ease-in-out infinite alternate;
+}
+.single-memory img{
+  display:block;
+  width:100%;
+  max-height:620px;
+  object-fit:contain;
+  background:#ead4ac;
+  border-radius:5px;
+}
+.memory-caption{
+  color:#713c25;
+  font-size:19px;
+  font-weight:bold;
+  margin-top:15px;
+  text-align:center;
+}
+@keyframes memoryGlow{
+  from{box-shadow:0 0 14px #ffd77855,0 16px 38px #0007}
+  to{box-shadow:0 0 32px #ffd778aa,0 16px 38px #0007}
+}
+
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:25px 0}
+.photo-slot{background:#fff0d9;color:#57351f;padding:12px 12px 25px;transform:rotate(-2deg);box-shadow:0 8px 22px #0006}
+.photo-slot:nth-child(even){transform:rotate(2deg)}
+.photo-slot img{width:100%;height:190px;object-fit:cover;background:#ead4ac;display:block}
+.photo-slot input{width:100%;margin-top:10px;font-size:12px}
+.photo-slot small{display:block;margin-top:7px}
+.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.action.primary{background:linear-gradient(120deg,#ffdc86,#bd713f);color:#35101a;font-weight:bold}
+.hint{font-size:13px;color:#e8cda7}
+footer{text-align:center;color:#d4ae83;padding:25px;font-size:13px;position:relative;z-index:1}
+.heart{color:#ff8da1;animation:beat 1s infinite;display:inline-block}
+@keyframes beat{50%{transform:scale(1.25)}}
+.spark{position:fixed;width:5px;height:5px;border-radius:50%;background:#ffdb78;pointer-events:none;z-index:5;animation:burst 1s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(.1);opacity:0}}
+.envelope{font-size:80px;filter:drop-shadow(0 0 20px #ffcb5b)}
+
+
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">A LITTLE DIWALI SURPRISE · MADE WITH LOVE</div>
+  <nav aria-label="Surprise pages">
+    <button class="active" data-page="welcome">Welcome</button>
+    <button data-page="festival">Diwali</button>
+    <button data-page="memories">Memories</button>
+    <button data-page="letter">Letter</button>
+    <button data-page="final">Surprise</button>
+  </nav>
+</header>
+
+<main>
+<section class="page active" id="welcome">
+  <div class="diyas"><span class="diya">🪔</span><span class="diya">🪔</span><span class="diya">🪔</span></div>
+  <p class="hero-sub">A little surprise, just for you...</p>
+  <h1>Happy Diwali,<br>Ammu <span class="heart">❤️</span></h1>
+  <p class="hero-sub">Your smile is more beautiful than a thousand lights ✨</p>
+  <div class="controls"><button class="action primary" onclick="go('festival');fireworks()">✨ Start the surprise</button></div>
+</section>
+
+<section class="page" id="festival">
+  <div class="diyas"><span class="diya">🪔</span><span class="diya">🌼</span><span class="diya">🪔</span></div>
+  <h2>Wishing you a Festival of Lights! 🎆</h2>
+  <div class="card">
+    <p>May this Diwali bring new happiness, laughter, love, and success into your life.</p>
+    <p>May every lamp light up your dreams, and every firework brighten the sky just like your smile. ❤️</p>
+  </div>
+  <button class="action" onclick="fireworks()">🎆 Light the fireworks</button>
+  <div class="controls"><button class="action" onclick="go('welcome')">← Back</button><button class="action primary" onclick="go('memories')">Next →</button></div>
+</section>
+
+<section class="page" id="memories">
+  <h2>Our Sweet Memory ❤️</h2>
+  <p>Let’s keep this beautiful moment of ours in our hearts forever. 🥹</p>
+  <div class="single-memory">
+    <img src="our-memory.webp" alt="ನಮ್ಮ ಸುಂದರ ನೆನಪು">
+    <div class="memory-caption">A Beautiful Memory ❤️</div>
+  </div>
+  <div class="controls"><button class="action" onclick="go('festival')">← Back</button><button class="action primary" onclick="go('letter')">Read my letter 💌 →</button></div>
+</section>
+
+<section class="page" id="letter">
+  <div id="letterCover" class="card">
+    <div class="envelope">💌</div>
+    <h2>A Little Letter for Ammu</h2>
+    <p>Written from my heart, just for you...</p>
+    <button class="action primary" onclick="openLetter()">Open the letter ❤️</button>
+  </div>
+  <article id="letterText" class="letter hidden">
+    <h2>ನನ್ನ ಪ್ರೀತಿಯ Ammu ❤️</h2>
+    <p>Ammu, ಈ ದೀಪಾವಳಿಯಂದು ನಿನಗೆ ಒಂದು ಚಿಕ್ಕ ಮಾತು ಹೇಳಬೇಕು ಅನಿಸಿತು. 🥹</p>
+    <p>ಸಾವಿರಾರು ದೀಪಗಳು ಬೆಳಗಿದರೂ, ನನ್ನ ಜೀವನದಲ್ಲಿ ನೀನು ತರುವ ಸಂತೋಷವೇ ನನಗೆ ಅತ್ಯಂತ ವಿಶೇಷ. ನಿನ್ನ ನಗು, ನಿನ್ನ ಮಾತು, ನಿನ್ನ ಜೊತೆಗಿದ್ದ ಪ್ರತಿಯೊಂದು ಕ್ಷಣವೂ ನನಗೆ ತುಂಬಾ ಅಮೂಲ್ಯ.</p>
+    <p>ಕೆಲವೊಮ್ಮೆ ನಿನ್ನ ಜೊತೆ ಜಗಳವಾಡಬೇಕು ಅನಿಸುತ್ತದೆ, ಕೆಲವೊಮ್ಮೆ ಸುಮ್ಮನೆ ಕಿರಿಕಿರಿ ಮಾಡಬೇಕು ಅನಿಸುತ್ತದೆ. ಆದರೆ ದಿನದ ಕೊನೆಯಲ್ಲಿ ನಿನ್ನ ಜೊತೆ ಮಾತಾಡದೆ ಇದ್ದರೆ ಏನನ್ನೋ ಕಳೆದುಕೊಂಡ ಹಾಗೆ ಅನಿಸುತ್ತದೆ. 🤭❤️</p>
+    <p>ನೀನು ಯಾವಾಗಲೂ ಹೀಗೆಯೇ ನಗುತ್ತಾ ಇರು. ನಿನ್ನ ಎಲ್ಲಾ ಕನಸುಗಳು ನನಸಾಗಲಿ. ನಿನ್ನ ಜೀವನದಲ್ಲಿ ಸಂತೋಷ, ಪ್ರೀತಿ ಮತ್ತು ಯಶಸ್ಸು ತುಂಬಿರಲಿ.</p>
+    <p>ಈ ಪಟಾಕಿಗಳ ಬೆಳಕಿಗಿಂತಲೂ ನಿನ್ನ ನಗು ಹೆಚ್ಚು ಸುಂದರವಾಗಿರಲಿ. ಈ ದೀಪಗಳ ಬೆಳಕಿನಂತೆ ನಿನ್ನ ಜೀವನವೂ ಸದಾ ಪ್ರಕಾಶಮಾನವಾಗಿರಲಿ.</p>
+    <p>ಎಷ್ಟೇ ಹಬ್ಬಗಳು ಬಂದರೂ, ನನ್ನ ಪಾಲಿಗೆ ನೀನು ಯಾವಾಗಲೂ ಒಂದು ವಿಶೇಷ ಸಂಭ್ರಮವೇ. ❤️</p>
+    <p style="text-align:center"><strong>ದೀಪಾವಳಿ ಹಬ್ಬದ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು, Ammu! ❤️</strong></p>
+    <p>ನಿನ್ನನ್ನು ತುಂಬಾ ಪ್ರೀತಿಸುವ,</p>
+    <p class="signature"><strong>ನಿನ್ನವಳು ❤️</strong></p>
+    <h2>Always yours ❤️</h2>
+  </article>
+  <div class="controls"><button class="action" onclick="go('memories')">← Back</button><button class="action primary" onclick="go('final')">Final Surprise ❤️ →</button></div>
+</section>
+
+
+<section class="page" id="final">
+  <div class="diyas"><span class="diya">🪔</span><span class="heart">❤️</span><span class="diya">🪔</span></div>
+  <h1>You are my special celebration, Ammu ❤️</h1>
+  <div class="card">
+    <p>May your life always be filled with light, love, and happiness.</p>
+    <p>If this little surprise brings a smile to your face, that will be the greatest gift to me. 🥹</p>
+    <h2>Wishing you a very Happy Diwali! 🪔</h2>
+    <p><strong>Always yours ❤️</strong></p>
+  </div>
+  <button class="action primary" onclick="fireworks()">🎆 More fireworks!</button>
+  <button class="action" onclick="go('welcome')">↻ Start again</button>
+  <div class="card">
+    <h2>Share the link with Ammu 💌</h2>
+    <p class="hint">Once the website is published online, you can share its link here.</p>
+    <button class="action primary" onclick="sharePage()">🔗 Share link</button>
+    <p id="shareNote" class="hint"></p>
+  </div>
+</section>
+</main>
+<footer>Made with love, just for Ammu ❤️ · Happy Deepavali 🪔</footer>
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function openLetter(){
+  document.getElementById('letterCover').classList.add('hidden');
+  document.getElementById('letterText').classList.remove('hidden');
+}
+function fireworks(){
+  for(let i=0;i<18;i++){
+    const x=Math.random()*window.innerWidth, y=80+Math.random()*(window.innerHeight*.65);
+    for(let j=0;j<14;j++){
+      const s=document.createElement('i');s.className='spark';s.style.left=x+'px';s.style.top=y+'px';
+      const a=(Math.PI*2*j)/14, d=35+Math.random()*65;
+      s.style.setProperty('--x',Math.cos(a)*d+'px');s.style.setProperty('--y',Math.sin(a)*d+'px');
+      document.body.appendChild(s);setTimeout(()=>s.remove(),1100);
+    }
+  }
+}
+async function sharePage(){
+  const note=document.getElementById('shareNote');
+  const url=location.href;
+  if(url.startsWith('file:')){
+    note.textContent='ಮೊದಲು ಈ ವೆಬ್‌ಸೈಟ್ ಅನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಪ್ರಕಟಿಸಿ. ನಂತರ ಸಿಗುವ https ಲಿಂಕ್ ಅನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು.';
+    return;
+  }
+  try{
+    if(navigator.share){await navigator.share({title:'Happy Diwali Ammu ❤️',text:'ನಿನಗಾಗಿ ಒಂದು ಪುಟ್ಟ ದೀಪಾವಳಿ ಸರ್ಪ್ರೈಸ್ ❤️',url});}
+    else{await navigator.clipboard.writeText(url);note.textContent='ಲಿಂಕ್ ಕಾಪಿಯಾಗಿದೆ! ಈಗ Ammu ಗೆ ಕಳುಹಿಸಿ ❤️';}
+  }catch(e){note.textContent='ಈ ಲಿಂಕ್ ಅನ್ನು ಕಾಪಿ ಮಾಡಿ Ammu ಗೆ ಕಳುಹಿಸಿ: '+url;}
+}
+</script>
+</body>
+</html>
